@@ -1,0 +1,11 @@
+{
+  "name": "angular-req-tree",
+  "version": "1.0.0",
+  "description": "Generate dependency tree for angular directive requirements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ross Harrison",
+  "license": "MIT"
+}
