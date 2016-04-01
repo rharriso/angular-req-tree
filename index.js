@@ -16,8 +16,9 @@
   ]);
 
   for(var file of files){
-    findDirectives(file); 
+  //  findDirectives(file); 
   }
+  findDirectives(`${JS_ROOT}/shared/directives/block_directive.js`);
 
   console.log(requirements);
 
@@ -79,9 +80,11 @@
     // assume directive is returned at the end of the function as an object 
     var returnStmt = _.last(dirFn.body.body);
     for(var p of returnStmt.argument.properties){
-      if(p.key.name === 'requirements'){
-        if(p.type === "ArrayExpression"){
+      if(p.key.name === 'require'){
+        if(p.value.type === "ArrayExpression"){
           return _.pluck(p.value.elements, 'value');
+        } else{
+          return p.value;
         }
       }
     }
