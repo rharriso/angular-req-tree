@@ -16,9 +16,8 @@
   ]);
 
   for(var file of files){
-  //  findDirectives(file); 
+    findDirectives(file); 
   }
-  findDirectives(`${JS_ROOT}/shared/directives/block_directive.js`);
 
   console.log(requirements);
 
